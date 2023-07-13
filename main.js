@@ -1,14 +1,29 @@
+const entrada = document.querySelector("#entrada");
 const botao = document.querySelector("#botao");
-const codigoDoLote = 10 + Math.round(Math.random()*89)+"";
+
+const codigoDoLote = 10000 + Math.round(Math.random()*8999)+"";
 let codigoDebarra = geraCodigoDeBarra();
-console.log(codigoDebarra);
 
 botao.addEventListener("click", () => {
-    criaParagrafo();
-    codigoDebarra = parseInt(codigoDebarra) + 1;
+
+    let quantidadeDeCodigos = entrada.value;
+
+    const valorMinimo = 1;
+    const valorMaximo = 9999;
+
+    if(quantidadeDeCodigos > valorMaximo || quantidadeDeCodigos < valorMinimo) {
+        alert (`Valor não permitido! O valor tem que estar entre ${valorMinimo} e ${valorMaximo}`);
+        entrada.value = 1;
+    } else {
+        for (let i=1; i<= quantidadeDeCodigos; i++){
+            criaParagrafo();
+            codigoDebarra = parseInt(codigoDebarra) + 1;
+        }    
+    }
 })
 
 function criaParagrafo(){
+
     const containerCodigos = document.querySelector('#container-codigos'); 
 
     const paragrafo = document.createElement("p");
@@ -20,10 +35,7 @@ function criaParagrafo(){
 
 function geraCodigoDeBarra(){
     const codigoNacional = "789";
-    const codigoDaEmpresa ="5849"; 
-    let codigoDaQuantidade = "000";
-    return codigoNacional + codigoDaEmpresa + codigoDoLote + codigoDaQuantidade;
+    let codigoDaQuantidade = "0001";
+    return codigoNacional + codigoDoLote + codigoDaQuantidade;
 }
-
-
 
