@@ -4,7 +4,7 @@ const containerCodigos = document.querySelector('#container-codigos');
 
 const valorMinimoPermitido = 1;
 const valorMaximoPermitido = 9999;
-const codigoDoLote = 10000 + Math.round(Math.random() * 8999) + "";
+const codigoDoLote = 100000 + Math.round(Math.random() * 89999) + "";
 
 let codigoDeBarra = geraCodigoDeBarra();
 let listaCodigos = [];
@@ -13,7 +13,7 @@ botao.addEventListener("click", () => {
   const quantidadeDeCodigos = entrada.value;
 
   if (verificaSeENumero(quantidadeDeCodigos)) {
-    alert("Valor inválido. Digite um número");
+    alert("Valor inválido. Por favor digite um número");
   } else {
 
     if (verificaNumeroMinEMax(quantidadeDeCodigos)) {
@@ -22,7 +22,7 @@ botao.addEventListener("click", () => {
 
       for (let i = 1; i <= quantidadeDeCodigos; i++) {
         criaParagrafo();
-        listaCodigos.push(codigoDeBarra + "0");
+        listaCodigos.push(codigoDeBarra);
         codigoDeBarra = parseInt(codigoDeBarra) + 1;
       }
     }
@@ -35,21 +35,11 @@ function criaParagrafo() {
   paragrafo.classList.add("paragrafo");
   containerCodigos.appendChild(paragrafo);
   
-  paragrafo.innerHTML = codigoDeBarra + "0";
+  paragrafo.innerHTML = codigoDeBarra;
 }
 
 function geraCodigoDeBarra() {
   const codigoNacional = "789";
   let codigoDaQuantidade = "0001";
   return codigoNacional + codigoDoLote + codigoDaQuantidade;
-}
-  
-// validações
-
-function verificaNumeroMinEMax(quantidadeDeCodigos) {
-  return quantidadeDeCodigos > valorMaximoPermitido || quantidadeDeCodigos < valorMinimoPermitido;
-}
-
-function verificaSeENumero(quantidadeDeCodigos) {
-  return isNaN(quantidadeDeCodigos) === true;
 }
