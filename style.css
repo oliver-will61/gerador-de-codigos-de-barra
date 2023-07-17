@@ -1,0 +1,20 @@
+body {
+    padding: 0.5em;
+    background-color: #8EAC50;
+    color: #FFFFFF;
+}
+.quantidade-de-codigos{
+    width: 50px;
+}
+.controle{
+    margin-top: 0.5em;
+}
+.container-codigos {
+    background-color: #FFFFFF;
+    margin-top: 1em;
+    color: black;
+    padding: 0.5em;
+}
+.paragrafo{
+    margin-bottom: 0.3em;
+}

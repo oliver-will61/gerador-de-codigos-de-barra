@@ -4,16 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
     <title>Código de Barra</title>
 </head>
 <body>
 
-    <label for="entrada">Quantidade de Codigos:
-        <input id="entrada">
-    </label>
-    
-    <button id = botao>Gerar Códigos</button>
-    <button id =botao-download>Download</button>
+    <form>
+        <label for="entrada" class="titulo-quantidade-de-codigos">Quantidade de Codigos:
+            <input id="entrada" class="quantidade-de-codigos" value="1">
+        </label>
+
+        <div class="controle">
+            <button type="button" id = botao>Gerar Códigos</button>
+         <button type="button" id =botao-download>Download</button>
+        </div>
+        
+    </form>
 
     <div class="container-codigos" id="container-codigos"></div>
 
