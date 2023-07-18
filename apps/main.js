@@ -1,5 +1,7 @@
 const entrada = document.querySelector("#entrada");
+const controle = document.querySelector("#controle");
 const botao = document.querySelector("#botao");
+const botaoDownload = document.querySelector("#botao-download"); 
 const containerCodigos = document.querySelector('#container-codigos');
 
 const valorMinimoPermitido = 1;
@@ -8,6 +10,7 @@ const codigoDoLote = 100000 + Math.round(Math.random() * 89999) + "";
 
 let codigoDeBarra = geraCodigoDeBarra();
 let listaCodigos = [];
+
 
 botao.addEventListener("click", () => {
   const quantidadeDeCodigos = entrada.value;
@@ -20,6 +23,7 @@ botao.addEventListener("click", () => {
       alert(`Valor não permitido! O valor tem que estar entre ${valorMinimoPermitido} e ${valorMaximoPermitido}`);
     } else {
 
+      containerCodigos.classList.add("container-codigos");
       for (let i = 1; i <= quantidadeDeCodigos; i++) {
         criaParagrafo();
         listaCodigos.push(codigoDeBarra);
@@ -28,13 +32,20 @@ botao.addEventListener("click", () => {
     }
   }
   entrada.value = "";
+  botaoDownload.style.display ="inline-block";
 });
+
+function criaContainerCodigos(){
+  const containerCodigos =  document.createElement("div");
+  containerCodigos.classList.add("container-codigos");
+  body.appendChild(containerCodigos);
+}
 
 function criaParagrafo() {
   const paragrafo = document.createElement("p");
   paragrafo.classList.add("paragrafo");
   containerCodigos.appendChild(paragrafo);
-  
+
   paragrafo.innerHTML = codigoDeBarra;
 }
 

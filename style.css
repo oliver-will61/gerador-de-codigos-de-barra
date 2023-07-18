@@ -9,6 +9,9 @@ body {
 .controle{
     margin-top: 0.5em;
 }
+.botao-gerar-download {
+    display: none;
+}
 .container-codigos {
     background-color: #FFFFFF;
     margin-top: 1em;

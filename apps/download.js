@@ -1,4 +1,3 @@
-const botaoDownload = document.querySelector("#botao-download"); 
 
 botaoDownload.addEventListener("click", () => {
     salvarLista(listaCodigos); 
