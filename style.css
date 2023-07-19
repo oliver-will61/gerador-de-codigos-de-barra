@@ -1,16 +1,28 @@
 body {
     padding: 0.5em;
-    background-color: #8EAC50;
+    background-color: #59E046;
     color: #FFFFFF;
 }
 .quantidade-de-codigos{
-    width: 50px;
+    width: 60px;
+    text-align: center;
+    border: none;
+    border-radius: 0.25em;
+    padding: 0.25em;
 }
 .controle{
     margin-top: 0.5em;
 }
-.botao-gerar-download {
+#botao-download  {
     display: none;
+    background-color: #F01A11;
+    color: white;
+}
+
+.btn-light {
+    background-color: white;
+    margin-right: 0.25em;
+    border:none;
 }
 .container-codigos {
     background-color: #FFFFFF;
