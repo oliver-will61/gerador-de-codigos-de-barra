@@ -1,7 +1,19 @@
+:root {
+    --cor-de-fundo: #2ECA53;
+    --cor-fundo-btn-download: #F01A11;
+    --cor-terciaria: #FFFFFF;
+
+    --fonte:'Montserrat', sans-serif;
+}
+
 body {
-    padding: 0.5em;
-    background-color: #59E046;
-    color: #FFFFFF;
+    padding: 0.25em;
+    background-color: var(--cor-de-fundo);
+    font-family: var(--fonte);
+}
+.titulo-quantidade-de-codigos{
+    color: var(--cor-terciaria);
+    font-weight: 600;
 }
 .quantidade-de-codigos{
     width: 60px;
@@ -12,22 +24,21 @@ body {
 }
 .controle{
     margin-top: 0.5em;
+    margin: 1em 0;
 }
 #botao-download  {
     display: none;
-    background-color: #F01A11;
-    color: white;
+    background-color: var(--cor-fundo-btn-download);
+    color: var(--cor-terciaria);
 }
 
 .btn-light {
-    background-color: white;
+    background-color: var(--cor-terciaria);
     margin-right: 0.25em;
     border:none;
 }
 .container-codigos {
-    background-color: #FFFFFF;
-    margin-top: 1em;
-    color: black;
+    background-color: var(--cor-terciaria);
     padding: 0.5em;
     height: auto;
 }

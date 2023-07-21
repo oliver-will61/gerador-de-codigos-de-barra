@@ -31,7 +31,7 @@ botao.addEventListener("click", () => {
       }
     }
   }
-  entrada.value = "1";
+  
   botaoDownload.style.display ="inline-block";
 });
 
